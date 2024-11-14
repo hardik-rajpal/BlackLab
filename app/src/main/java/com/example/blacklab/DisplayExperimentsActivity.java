@@ -20,7 +20,7 @@ enum ThemeSetting {
 public class DisplayExperimentsActivity extends AppCompatActivity {
 
     UiModeManager uiModeManager;
-    static ThemeSetting themeSetting = ThemeSetting.Light;
+    static ThemeSetting themeSetting = ThemeSetting.System;
     Boolean responsiveToSystemTheme = true;
 
     @Override
@@ -33,12 +33,12 @@ public class DisplayExperimentsActivity extends AppCompatActivity {
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
         if (themeSetting == ThemeSetting.System) {
             applySystemTheme(newConfig);
             updateTextView();
-            recreate();
+            super.onConfigurationChanged(newConfig);
         }
+        recreate();
     }
 
     public void toggleTheme(View view) {
@@ -71,11 +71,9 @@ public class DisplayExperimentsActivity extends AppCompatActivity {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                 break;
             case System:
-                Configuration config = getResources().getConfiguration();
-                applySystemTheme(config);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                 break;
         }
-        recreate();
     }
 
     private void updateTextView() {
@@ -88,9 +86,6 @@ public class DisplayExperimentsActivity extends AppCompatActivity {
                 themeNameView.setText(R.string.theme_dark_mode);
                 break;
             case System:
-                Configuration config = getResources().getConfiguration();
-//                if((config.uiMode & config.UI_MODE_NIGHT_MASK) == config.UI_MODE_NIGHT_YES){
-                // night mode active. Using this to permit lower API versions (<30)
                 if (uiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
                     themeNameView.setText(R.string.theme_system_mode_dark);
                 } else {
@@ -101,10 +96,7 @@ public class DisplayExperimentsActivity extends AppCompatActivity {
     }
 
     private void applySystemTheme(Configuration config) {
-//        if((config.uiMode & config.UI_MODE_NIGHT_MASK) == config.UI_MODE_NIGHT_YES){
         if (uiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-
-            // night mode active. Using this to permit lower API versions (<30)
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
