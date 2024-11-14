@@ -8,12 +8,27 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title"
+        style="@style/TextAppearance.Material3.HeadlineLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/black_lab_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        style="@style/Widget.Material3.MaterialDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_display"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        android:onClick="launchDisplayExpsActivity"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
