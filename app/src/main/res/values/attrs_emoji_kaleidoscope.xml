@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="EmojiKaleidoscope">
+        <attr name="startEmoji" format="string" />
+    </declare-styleable>
+</resources>
