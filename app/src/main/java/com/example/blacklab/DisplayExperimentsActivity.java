@@ -38,12 +38,13 @@ public class DisplayExperimentsActivity extends AppCompatActivity {
 
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
         if (themeSetting == ThemeSetting.System) {
             applySystemTheme(newConfig);
             updateTextView();
             super.onConfigurationChanged(newConfig);
         }
-//        recreate();
+        recreate();
     }
 
     public void toggleTheme(View view) {
