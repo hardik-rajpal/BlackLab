@@ -31,4 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,DisplayExperimentsActivity.class);
         startActivity(intent);
     }
+    public void launchComposeExActivity(View view){
+        Intent intent = new Intent(this, ComposeEx.class);
+        startActivity(intent);
+    }
 }

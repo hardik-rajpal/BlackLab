@@ -26,9 +26,15 @@
         android:onClick="launchDisplayExpsActivity"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_custom_views"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_custom_views"
         android:onClick="launchCustomViewsActivity"/>
+    <Button
+    android:id="@+id/button_compose_ex"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_compose_experiments"
+    android:onClick="launchComposeExActivity"/>
 </LinearLayout>

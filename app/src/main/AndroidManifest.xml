@@ -16,10 +16,15 @@
             android:name=".CustomViewsJava"
             android:exported="false" />
         <activity
-            android:name=".CustomViews"
-            android:exported="false"
-            android:label="@string/title_activity_custom_views"
-            android:theme="@style/Theme.BlackLab" />
+            android:name=".ComposeEx"
+            android:exported="true"
+            android:label="@string/title_activity_compose_ex"
+            android:theme="@style/Theme.BlackLab">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".NotificationsActivity"
             android:exported="false"
@@ -33,12 +38,8 @@
             android:theme="@style/Theme.BlackLab" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

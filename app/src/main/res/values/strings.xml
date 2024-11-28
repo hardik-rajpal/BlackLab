@@ -53,6 +53,7 @@
     <string name="theme_system_mode_light">System Mode: Light</string>
     <string name="theme_system_mode_dark">System Mode: Dark</string>
     <string name="btn_custom_views">Custom Views</string>
-    <string name="title_activity_custom_views">CustomViews</string>
+    <string name="title_activity_compose_ex">Compose Experiments</string>
     <string name="txt_emoji_kaleidoscope">Emoji Kaleidoscope</string>
+    <string name="btn_compose_experiments">Compose Experiments</string>
 </resources>
