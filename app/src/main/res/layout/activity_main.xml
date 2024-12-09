@@ -37,4 +37,10 @@
     android:layout_height="wrap_content"
     android:text="@string/btn_compose_experiments"
     android:onClick="launchComposeExActivity"/>
+    <Button
+        android:id="@+id/button_compose_assistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/compose_assistance"
+        android:onClick="launchComposeAssistanceActivity"/>
 </LinearLayout>

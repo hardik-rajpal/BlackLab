@@ -35,4 +35,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ComposeEx.class);
         startActivity(intent);
     }
+    public void launchComposeAssistanceActivity(View view){
+        Intent intent = new Intent(this, ComposeAssistance.class);
+        startActivity(intent);
+    }
+    public void launchMultiViewActivity(View view){
+        Intent intent = new Intent(this, ViewsVsActivitiesActivity.class);
+        startActivity(intent);
+    }
 }

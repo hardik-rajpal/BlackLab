@@ -56,4 +56,5 @@
     <string name="title_activity_compose_ex">Compose Experiments</string>
     <string name="txt_emoji_kaleidoscope">Emoji Kaleidoscope</string>
     <string name="btn_compose_experiments">Compose Experiments</string>
+    <string name="compose_assistance">Compose Assistance</string>
 </resources>
