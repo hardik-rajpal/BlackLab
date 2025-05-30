@@ -1,0 +1,67 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/colorstrips">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/black">
+            <TextView
+                android:padding="5dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="One victim lives the tragedy"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/light_blue_400">
+            <TextView
+                android:padding="5dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="One victim stops to stare"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/red">
+            <TextView
+                android:padding="5dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Still another walks on by"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/green">
+            <TextView
+                android:padding="5dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Still another walks on by"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/yellow">
+            <TextView
+                android:padding="5dp"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Still another walks on by"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

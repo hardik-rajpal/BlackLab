@@ -63,7 +63,6 @@ class ComposeEx : ComponentActivity() {
             BlackLabTheme {
                 Scaffold { paddingValues ->
                     JacksonBrowneWiki(paddingValues)
-                    isSystemInDarkTheme()
                 }
             }
 
@@ -100,7 +99,7 @@ class ComposeEx : ComponentActivity() {
             shadowElevation = 1.dp,
             modifier = Modifier.animateContentSize()
         ) {
-            Column() {
+            Column {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -114,6 +113,9 @@ class ComposeEx : ComponentActivity() {
                             Icon(Icons.Default.KeyboardArrowDown, "")
                         }
                     }
+                }
+                if(isSystemInDarkTheme()){
+                    print("We're in the dark theme.")
                 }
                 if (viewModel.getIsExpanded()) {
                     Box(modifier = Modifier.padding(10.dp)) {

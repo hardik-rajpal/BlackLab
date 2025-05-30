@@ -13,19 +13,21 @@
         android:theme="@style/Theme.BlackLab"
         tools:targetApi="31">
         <activity
-            android:name=".ViewsVsActivitiesActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".FakePadding"
+            android:exported="true"
+            android:theme="@style/Theme.BlackLab">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
         <activity
+            android:name=".ViewsVsActivitiesActivity"
+            android:exported="false"></activity>
+        <activity
             android:name=".ComposeAssistance"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".CustomViewsJava"
             android:exported="false" />
@@ -42,9 +44,10 @@
         <activity
             android:name=".DisplayExperimentsActivity"
             android:configChanges="uiMode"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_display_experiments"
-            android:theme="@style/Theme.BlackLab" />
+            android:theme="@style/Theme.BlackLab">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false" />

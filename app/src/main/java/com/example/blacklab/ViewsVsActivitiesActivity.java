@@ -12,7 +12,7 @@ public class ViewsVsActivitiesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 // it's not just launching activities and views here and there but also about
-        // managing data between these. 
+        // managing data between these.
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_views_vs_activities);
